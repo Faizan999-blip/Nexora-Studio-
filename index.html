@@ -3,98 +3,354 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nexora Studio | Creative Digital Solutions</title>
-<meta name="description" content="Nexora Studio - Video Editing, Graphic Design, Social Media Management and Client Management.">
-<link rel="stylesheet" href="style.css">
+
+<title>Nexora Studio | Creative Digital Agency</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    line-height:1.6;
+}
+
+header{
+    min-height:100vh;
+    background:linear-gradient(135deg,#050505,#151515);
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 7%;
+    background:#0b0b0b;
+    position:sticky;
+    top:0;
+    z-index:100;
+    border-bottom:1px solid #222;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+    color:#d4af37;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:18px;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#d4af37;
+}
+
+.hero{
+    text-align:center;
+    padding:120px 20px;
+}
+
+.hero h1{
+    font-size:55px;
+    color:#d4af37;
+}
+
+.hero h2{
+    font-size:28px;
+    margin:15px 0;
+}
+
+.hero p{
+    max-width:650px;
+    margin:auto;
+    color:#ccc;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:13px 28px;
+    background:#d4af37;
+    color:#000;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+section{
+    padding:70px 7%;
+}
+
+.title{
+    text-align:center;
+    color:#d4af37;
+    font-size:35px;
+    margin-bottom:40px;
+}
+
+.services,.team,.portfolio,.reviews{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#111;
+    border:1px solid #292929;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.card h3{
+    color:#d4af37;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#bbb;
+}
+
+.portfolio .work{
+    min-height:180px;
+    background:#151515;
+    border:1px dashed #555;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#aaa;
+}
+
+.review{
+    background:#111;
+    padding:25px;
+    border-radius:15px;
+    border-left:3px solid #d4af37;
+}
+
+.review h3{
+    color:#d4af37;
+}
+
+.contact{
+    text-align:center;
+    background:#0d0d0d;
+}
+
+.contact p{
+    margin:10px;
+    color:#ccc;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#000;
+    color:#888;
+}
+
+@media(max-width:700px){
+    nav{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    nav a{
+        margin:5px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero h2{
+        font-size:22px;
+    }
+}
+</style>
 </head>
+
 <body>
 
-<header class="hero">
-  <nav class="nav">
-    <div class="brand">NEXORA<span>STUDIO</span></div>
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#team">Team</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+<header id="home">
 
-  <section id="home" class="hero-content">
-    <p class="eyebrow">CREATIVE DIGITAL STUDIO</p>
-    <h1>We Create.<br><span>We Edit. We Grow.</span></h1>
-    <p class="intro">Nexora Studio helps brands stand out through creative video editing, graphic design and social media solutions.</p>
-    <a class="gold-btn" href="#portfolio">Explore Our Work</a>
-  </section>
+<nav>
+    <div class="logo">NEXORA STUDIO</div>
+
+    <div>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#team">Team</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>NEXORA STUDIO</h1>
+
+    <h2>Creative Digital Solutions</h2>
+
+    <p>
+        We create professional designs, engaging videos and
+        powerful social media content to help brands grow.
+    </p>
+
+    <a class="btn" href="#contact">Work With Us</a>
+</div>
+
 </header>
 
-<main>
-<section id="team" class="section">
-  <p class="eyebrow">THE TEAM</p>
-  <h2>Meet Our <span>4-Member Team</span></h2>
-  <div class="grid team-grid">
-    <article class="card"><div class="avatar">S</div><h3>Shahzaib</h3><p>Social Media Manager</p></article>
-    <article class="card"><div class="avatar">AR</div><h3>Abdul Rehman</h3><p>Clients Manager</p></article>
-    <article class="card"><div class="avatar">F</div><h3>Faizan</h3><p>Video Editor</p></article>
-    <article class="card"><div class="avatar">F</div><h3>Fawad</h3><p>Graphic Designer</p></article>
-  </div>
+
+<section id="services">
+
+<h2 class="title">Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>🎨 Graphic Design</h3>
+<p>Professional logos, posters, flyers, thumbnails and social media designs.</p>
+</div>
+
+<div class="card">
+<h3>🎬 Video Editing</h3>
+<p>Creative video editing, reels, shorts, YouTube videos and promotional content.</p>
+</div>
+
+<div class="card">
+<h3>📱 Social Media Management</h3>
+<p>Social media posts, content planning and brand growth strategies.</p>
+</div>
+
+<div class="card">
+<h3>📸 Photo Editing</h3>
+<p>Clean and professional photo editing for personal and business use.</p>
+</div>
+
+</div>
 </section>
 
-<section id="services" class="section dark-section">
-  <p class="eyebrow">WHAT WE DO</p>
-  <h2>Our <span>Services</span></h2>
-  <div class="grid services-grid">
-    <article class="service"><b>01</b><h3>Video Editing</h3><p>Shorts, reels, YouTube videos and professional edits.</p></article>
-    <article class="service"><b>02</b><h3>Graphic Design</h3><p>Posts, flyers, posters, thumbnails and branding creatives.</p></article>
-    <article class="service"><b>03</b><h3>Social Media</h3><p>Creative posts and content solutions for social platforms.</p></article>
-    <article class="service"><b>04</b><h3>Client Management</h3><p>Clear communication and organized project coordination.</p></article>
-  </div>
+
+<section id="team">
+
+<h2 class="title">Our Team</h2>
+
+<div class="team">
+
+<div class="card">
+<h3>Abdul Rahman</h3>
+<p>Client Manager</p>
+</div>
+
+<div class="card">
+<h3>Fawad Ahmed</h3>
+<p>Graphic Designer</p>
+</div>
+
+<div class="card">
+<h3>Faizan Ali</h3>
+<p>Video Editor</p>
+</div>
+
+<div class="card">
+<h3>Our Team Member</h3>
+<p>Social Media Manager</p>
+</div>
+
+</div>
 </section>
 
-<section id="portfolio" class="section">
-  <p class="eyebrow">OUR WORK</p>
-  <h2>Portfolio <span>Showcase</span></h2>
-  <p class="section-note">Replace these placeholders with your real videos, designs and client projects.</p>
-  <div class="grid portfolio-grid">
-    <div class="work"><div class="placeholder">VIDEO<br>PROJECT</div><h3>Video Editing</h3><p>Add your project here</p></div>
-    <div class="work"><div class="placeholder">GRAPHIC<br>DESIGN</div><h3>Graphic Design</h3><p>Add your design here</p></div>
-    <div class="work"><div class="placeholder">SOCIAL<br>MEDIA</div><h3>Social Media</h3><p>Add your post here</p></div>
-  </div>
-  <div class="upload-note">
-    <strong>Portfolio Upload Area</strong>
-    <p>For the live version, connect this section to a storage/database so the four team members can upload work from mobile.</p>
-  </div>
+
+<section id="portfolio">
+
+<h2 class="title">Our Portfolio</h2>
+
+<div class="portfolio">
+
+<div class="work">
+<p>🖼️<br>Graphic Design<br>Add your work here</p>
+</div>
+
+<div class="work">
+<p>🎬<br>Video Editing<br>Add your video here</p>
+</div>
+
+<div class="work">
+<p>📱<br>Social Media Post<br>Add your design here</p>
+</div>
+
+<div class="work">
+<p>🎨<br>Branding Project<br>Add your project here</p>
+</div>
+
+</div>
+
 </section>
 
-<section id="reviews" class="section dark-section">
-  <p class="eyebrow">CLIENT FEEDBACK</p>
-  <h2>Client <span>Reviews</span></h2>
-  <div class="review">
-    <div class="quote">“</div>
-    <p>Your client reviews will appear here. Add the client's name, review and optional project image/logo.</p>
-    <h3>Client Name</h3>
-    <small>Client</small>
-  </div>
+
+<section id="reviews">
+
+<h2 class="title">Client Reviews</h2>
+
+<div class="reviews">
+
+<div class="review">
+<h3>Client Review</h3>
+<p>“Amazing work and very professional service.”</p>
+</div>
+
+<div class="review">
+<h3>Client Review</h3>
+<p>“Creative designs and excellent video editing.”</p>
+</div>
+
+<div class="review">
+<h3>Client Review</h3>
+<p>“Great communication and quality work.”</p>
+</div>
+
+</div>
+
 </section>
 
-<section id="contact" class="section contact-section">
-  <p class="eyebrow">LET'S WORK TOGETHER</p>
-  <h2>Contact <span>Nexora Studio</span></h2>
-  <p class="section-note">Call or WhatsApp us for your next project.</p>
-  <div class="contacts">
-    <a href="tel:03042317124">0304 2317124</a>
-    <a href="tel:03125704870">0312 5704870</a>
-    <a href="tel:03021376548">0302 1376548</a>
-    <a href="tel:03228707873">0322 8707873</a>
-  </div>
+
+<section id="contact" class="contact">
+
+<h2 class="title">Let's Work Together</h2>
+
+<p>📧 Email: nexorastudio@example.com</p>
+
+<p>📱 WhatsApp: Add your number here</p>
+
+<p>📍 Bahawalpur, Pakistan</p>
+
+<a class="btn" href="mailto:nexorastudio@example.com">
+Contact Nexora Studio
+</a>
+
 </section>
-</main>
+
 
 <footer>
-  <div class="brand">NEXORA<span>STUDIO</span></div>
-  <p>© 2026 Nexora Studio. All rights reserved.</p>
+© 2026 Nexora Studio — All Rights Reserved
 </footer>
 
 </body>
-</html>
+  </html>
